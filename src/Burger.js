@@ -8,6 +8,9 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Modal from '@mui/material/Modal'
+import {useCart} from 'react-use-cart'
+
+//Burger page component
 export function Burger() {
   const burger=[
     {
@@ -88,7 +91,7 @@ export function Burger() {
      <img className="img" src="https://burgerking-image.s3.amazonaws.com/products/Home/web/1x_web_20220329051647458976_1440x300jpg"></img>
     <h2 style={{fontSize: "150%",backgroundColor: "crimson",color:"white",paddingRight: "85%",}}>TOP PICKS</h2>
     <div className='recipe-list-container1'>
-    {burger.map((user)=><Dessert poster={user.poster} header={user.header} content={user.content} price={user.price}/>)}
+    {burger.map((user)=><Dessert poster={user.poster} header={user.header} content={user.content} price={user.price}item={user.item}/>)}
     </div>
     <div>
         <img
@@ -118,6 +121,7 @@ function Dessert({poster,header,content,price}){
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const {addItem}=useCart();
   return(
     <div>
       <div>
@@ -143,8 +147,8 @@ function Dessert({poster,header,content,price}){
         </IconButton>
           <div style={{display:"flex",padding:"2%",gap:"2%"}}>
         <img  src={poster} style={{width:"40%"}} alt="profile"></img>
-        <h3>{header}</h3>
-        
+        <h3>{header}-</h3>
+        <h3>{price}</h3>
         </div>
         <hr></hr>
         <h3>MAKE IT A MEAL</h3>

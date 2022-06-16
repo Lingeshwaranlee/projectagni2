@@ -7,7 +7,9 @@ import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import Modal from '@mui/material/Modal'
+import Modal from '@mui/material/Modal';
+
+//BFcake page component
 export function Bfcake() {
   const history =useHistory(); 
   const cake=[
@@ -66,7 +68,7 @@ export function Bfcake() {
           <Button
             variant="contained"
             style={{ backgroundColor: "crimson" }}
-            onClick={() => history.push("/book")}
+           
           >
             Offers
           </Button>
@@ -89,7 +91,7 @@ export function Bfcake() {
           <Button
             variant="contained"
             style={{ backgroundColor: "crimson" }}
-            onClick={() => history.push("/book")}
+          
           >
             Offers
           </Button>
@@ -159,8 +161,8 @@ function Browncake({poster,header,content,price}){
          
           <div style={{display:"flex",padding:"2%",gap:"2%"}}>
         <img  src={poster} style={{width:"40%"}} alt="profile"></img>
-        <h3>{header}</h3>
-        
+        <h3>{header}-</h3>
+        <h3>{price}</h3>
         </div>
         <hr></hr>
         <h3>MAKE IT A MEAL</h3>

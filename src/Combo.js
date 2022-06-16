@@ -7,7 +7,9 @@ import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import Modal from '@mui/material/Modal'
+import Modal from '@mui/material/Modal';
+
+//Combo page component
 
 export function Combo() {
   const history = useHistory();
@@ -76,7 +78,7 @@ export function Combo() {
           <Button
             variant="contained"
             style={{ backgroundColor: "crimson" }}
-            onClick={() => history.push("/book")}
+            
           >
             Offers
           </Button>
@@ -99,7 +101,7 @@ export function Combo() {
           <Button
             variant="contained"
             style={{ backgroundColor: "crimson" }}
-            onClick={() => history.push("/book")}
+           
           >
             Offers
           </Button>
@@ -122,7 +124,7 @@ export function Combo() {
           <Button
             variant="contained"
             style={{ backgroundColor: "crimson" }}
-            onClick={() => history.push("/book")}
+            
           >
             Offers
           </Button>
@@ -177,8 +179,8 @@ function Family({poster,header,content,price}){
          
           <div style={{display:"flex",padding:"2%",gap:"2%"}}>
         <img  src={poster} style={{width:"40%"}} alt="profile"></img>
-        <h3>{header}</h3>
-        
+        <h3>{header}-</h3>
+        <h3 style={{color:"crimson"}}>{price}</h3>
         </div>
         <hr></hr>
         <h3>MAKE IT A MEAL</h3>
@@ -192,7 +194,7 @@ function Family({poster,header,content,price}){
            </ul>
            <h3>ADD-Ons</h3>
            <div style={{padding:"3%"}}>
-             <img src='https://burgerking-image.s3.amazonaws.com/products/AE/web/1x_web_20220314071857381981_158x79jpg'></img>
+           <img src='https://burgerking-image.s3.amazonaws.com/products/AE/web/1x_web_20220314071857381981_158x79jpg'></img>
            <img src='https://burgerking-image.s3.amazonaws.com/products/AE/web/1x_web_20211007050031160391_158x79jpg'></img>
            <img src='https://burgerking-image.s3.amazonaws.com/products/AE/web/1x_web_20210922070306315300_158x79jpg'></img>
          

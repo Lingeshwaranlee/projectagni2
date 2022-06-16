@@ -19,7 +19,7 @@
 .button{
     display: flex;
  gap: 40px;
- margin-left: 20%;
+ color: crimson;
    border-radius: 42px !important;
    text-decoration: none;
 }
